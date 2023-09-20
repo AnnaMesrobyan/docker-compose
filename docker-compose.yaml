@@ -1,7 +1,7 @@
 version: '3'
 services:
-  # my-app:
-  # image: ${docker-registry}/my-app:1.0
+  #my-app:
+  #image: ${docker-registry}/my-app:1.0
   # ports:
   # - 3000:3000
   mongodb:
@@ -17,7 +17,7 @@ services:
     image: mongo-express
     restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
     ports:
-      - 8080:8081
+      - 8081:8081
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password
