@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                checkout scmGit(branches: [[name: '*/AnnaMesrobyan-main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnnaMesrobyan/docker-compose.git']])    
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnnaMesrobyan/docker-compose.git']]) 
             }
         }
     
