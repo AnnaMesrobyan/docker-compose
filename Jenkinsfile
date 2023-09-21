@@ -6,11 +6,7 @@ pipeline {
     }
    
     stages {
-        stage('Cloning Git') {
-            steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnnaMesrobyan/docker-compose.git']]) 
-            }
-        }
+        
     
        
         stage("verity tooling") {
