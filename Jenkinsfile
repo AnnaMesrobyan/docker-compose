@@ -21,13 +21,13 @@ pipeline {
             }
         }
 
-         stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build registry
-        }
-      }
-    }
+         #stage('Building image') {
+     # steps{
+        #script {
+          #dockerImage = docker.build registry
+        #}
+      #}
+    #}
         stage('Pushing to ECR') {
      steps{  
          script {
