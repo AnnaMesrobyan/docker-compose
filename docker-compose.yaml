@@ -1,7 +1,7 @@
 version: '3'
 services:
    my-app:
-    image: 936445189194.dkr.ecr.eu-central-1.amazonaws.com/for-jenkins/my-app:1.0
+    image: https://hub.docker.com/repositories/annames1102 :v1
     ports:
      - 3000:3000
    mongodb:
