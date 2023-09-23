@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     environment {
-        registry = "936445189194.dkr.ecr.eu-central-1.amazonaws.com/for-jenkins"
-    }
-   
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+  }
     stages {
         
     
@@ -20,7 +19,11 @@ pipeline {
                 '''
             }
         }
-
+        stage('Login') {
+          steps {
+        sh 'echo  dckr_pat_BCckauYYGBDayJJh5-0DIXCjQt | docker login -u annames1102 --password-stdin'
+      }
+    }
           stage('Building image') {
       steps{
         script {
