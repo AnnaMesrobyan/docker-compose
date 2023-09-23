@@ -4,7 +4,7 @@ services:
     image: ${936445189194.dkr.ecr.eu-central-1.amazonaws.com/for-jenkins}/my-app:1.0
     ports:
      - 3000:3000
-  mongodb:
+   mongodb:
     image: mongo
     ports:
       - 27021:27021
@@ -13,7 +13,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=password
     volumes:
       - mongo-data:/data/db
-  mongo-express:
+   mongo-express:
     image: mongo-express
     restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
     ports:
